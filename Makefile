@@ -23,5 +23,3 @@ build:
 .PHONY: run
 run:
 	obj_dir/Vtop +UVM_TESTNAME=alu_test
-
-# FIXME: clean/gitignore obj dir
