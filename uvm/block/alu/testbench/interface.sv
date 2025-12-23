@@ -14,6 +14,7 @@
 // --- Includes --- //
 
 // --- Interface --- //
+// FIXME: Think we need to use modports, using out as inout
 interface alu_if (input logic CLK);
 
   // --- Inputs --- //

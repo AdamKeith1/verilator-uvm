@@ -3,7 +3,10 @@ UVM_DIR := ./uvm/block/alu/testbench
 
 .PHONY: help
 help:
-	@echo "helptext coming soon..."
+	@echo "*** targets ***"
+	@echo "build - compile"
+	@echo "run"
+	@echo "clean"
 
 .PHONY: clean
 clean:
@@ -13,6 +16,7 @@ clean:
 .PHONY: build
 build:
 	verilator -Wno-fatal --binary -j --top-module top \
+		-CFLAGS -DVL_DEBUG=1 \
 		+incdir+/opt/1800.2-2017-1.0/src \
 		+define+UVM_NO_DPI \
 		+incdir+$(UVM_DIR) \
